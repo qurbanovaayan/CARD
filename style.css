@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(1, 4, 15);
+}
+header {
+    height: 80px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    border-bottom: 1px solid rgb(219, 217, 217);
+}
+.logo {
+    font-size: 35px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav button {
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.hero {
+    height: 340px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1 {
+    font-size: 70px;
+    font-weight: 900;
+    color: black;
+    text-align: center;
+}
+main {
+    padding: 45px 32px;
+}
+#searchInput {
+    display: block;
+    width: 290px;
+    height: 47px;
+    margin: 0 auto 55px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+}
+#cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    width: 100%;
+}
+.card {
+    display: flex;
+    width: 100%;
+    height: 253px;
+    background-color: rgb(111, 107, 107);
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+}
+.card img {
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.card-content {
+    position: relative;
+    flex: 1;
+    padding: 30px 20px;
+    font-size: 18px;
+}
+.card h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.status {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.status span {
+    color: green;
+    font-size: 20px;
+}
+.title {
+    color: rgb(230, 222, 222);
+    font-size: 16px;
+    margin-top: 15px;
+}
+.value {
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.info {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 22px;
+}
+@media (max-width: 1000px) {
+
+    #cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+@media (max-width: 500px) {
+
+    #cards {
+        grid-template-columns: 1fr;
+    }
+
+}
